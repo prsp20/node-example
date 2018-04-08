@@ -3,7 +3,7 @@ import ExampleClient from './client/ExampleClient';
 import ExampleService from './ExampleService';
 import ExampleController from './ExampleController';
 import {getConfig} from '../../arch/config';
-import uuid from 'uuid/v4'
+import uuid from 'uuid/v4';
 
 export default () => {
   const externalServiceUrl = getConfig('service/url');

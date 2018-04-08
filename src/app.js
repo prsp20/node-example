@@ -2,8 +2,7 @@ import bodyParser from 'body-parser';
 import healthCheck from 'express-healthcheck';
 import express from 'express';
 import {errorHandler, notFoundHandler} from './arch/middleware/error';
-import routes from './modules'
-import {getConfig} from './arch/config';
+import routes from './modules';
 
 export const getApplication = async () => {
   const app = express();
@@ -23,8 +22,8 @@ const _middleware = (app) => {
 };
 
 const _routes = async (app) => {
-  //const jwtSecret = getConfig('authentication/secret');
-  //TODO: app.use(authenticationMiddleware);
+  // const jwtSecret = getConfig('authentication/secret');
+  // TODO: app.use(authenticationMiddleware);
 
   app.use('/health', healthCheck());
 

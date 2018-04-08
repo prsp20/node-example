@@ -10,7 +10,7 @@ export const errorHandler = (err, req, res, next) => {
   const status = err.status || 500;
 
   if (err.status === 500) {
-    //TODO Log error
+    // TODO Log error
   }
 
   return res.status(status)
